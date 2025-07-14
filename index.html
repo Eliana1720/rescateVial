@@ -4,20 +4,21 @@
 <head>
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Rescate Vial</title>
+ <title>RESCATE VIAL</title>
 
  <!-- Google Fonts -->
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
  <!-- Favicon -->
- <link rel="icon" type="image/jpg" href="imagenes/logo.ico.jpg" />
+ <link rel="icon" type="image/jpg" href="imagenes/logo.png">
 
  <!-- Font Awesome -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
  <style>
+  /* Reset & base */
   * {
    box-sizing: border-box;
    margin: 0;
@@ -25,24 +26,19 @@
    font-family: 'Roboto', sans-serif;
   }
 
+  html {
+   scroll-behavior: smooth;
+  }
+
   body {
    color: #222;
-   background-color: #fff;
   }
 
-  a {
-   text-decoration: none;
-   color: inherit;
-  }
-
-  ul {
-   list-style: none;
-  }
-
+  /* Top Bar */
   .top-bar {
-   background-color: #0056a3;
+   background-color: #D78704;
    color: white;
-   padding: 10px 20px;
+   padding: 10px;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -51,53 +47,100 @@
   }
 
   .call-button {
-   background-color: #f78651;
+   background-color: #1EA952;
    color: white;
    padding: 0.4rem 1rem;
    border-radius: 5px;
+   text-decoration: none;
    font-weight: bold;
    transition: background 0.3s ease;
   }
 
   .call-button:hover {
-   background-color: #e55b00;
+   background-color: #25D366;
   }
 
+  /* Navbar */
   .navbar {
-   background-color: #003366;
-   color: white;
+   background-color: #ffffff;
+   /* Fondo claro para destacar el logo */
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: 25px 35px;
+   padding: 0px 20px;
    flex-wrap: wrap;
    position: relative;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .logo {
-   font-size: 1.4rem;
-   font-weight: bold;
+  /* Logo */
+  .navbar img {
+   width: 100px;
   }
 
-  .hamburger {
+  /* Ícono hamburguesa */
+  .menu-toggle {
+   font-size: 1.5rem;
    display: none;
-   background: none;
-   border: none;
-   font-size: 1.8rem;
-   color: white;
    cursor: pointer;
   }
 
+  /* Menú desktop */
   .nav-links {
+   list-style: none;
    display: flex;
-   gap: 20px;
+   gap: 16px;
   }
 
   .nav-links a {
-   color: white;
-   font-weight: 500;
+   color: #000;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: 1rem;
+   padding: 6px 10px;
+   transition: color 0.3s;
   }
 
+  .nav-links a:hover {
+   color: #D78704;
+  }
+
+  /* Menú mobile */
+  @media (max-width: 768px) {
+   .menu-toggle {
+    display: block;
+    color: #003366;
+   }
+
+   .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    border-top: 1px solid #ccc;
+   }
+
+   .nav-links.active {
+    display: flex;
+   }
+
+   .nav-links li {
+    margin-bottom: 12px;
+   }
+
+   .nav-links a {
+    font-size: 1rem;
+    padding: 10px 0;
+    color: #000;
+   }
+  }
+
+  /* Carrusel */
   .carousel {
    position: relative;
    overflow: hidden;
@@ -108,7 +151,10 @@
    content: "";
    background: rgba(0, 0, 0, 0.5);
    position: absolute;
-   inset: 0;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
    z-index: 5;
   }
 
@@ -128,25 +174,101 @@
    position: absolute;
    top: 40%;
    left: 5%;
-   z-index: 10;
    color: white;
+   z-index: 10;
    padding: 1rem;
    max-width: 50%;
-   text-shadow: 2px 2px 4px black;
   }
 
   .hero-text h1 {
    font-size: 3.5rem;
    font-weight: 900;
+   text-shadow: 2px 2px 4px #000;
    margin-bottom: 1rem;
   }
 
   .hero-text p {
    font-size: 1.2rem;
+   text-shadow: 1px 1px 2px #000;
   }
 
-  section {
+  /* Características */
+  .caracteristicas-section {
+   background-color: #f9f9f9;
    padding: 60px 20px;
+   text-align: center;
+  }
+
+  .caracteristicas-grid {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   max-width: 1200px;
+   margin: auto;
+  }
+
+  .caracteristicas-box {
+   flex: 0 0 150px;
+   background: #fff;
+   padding: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   text-align: center;
+  }
+
+  .caracteristicas-box i {
+   font-size: 2rem;
+   color: #FBA417;
+   margin-bottom: 10px;
+  }
+
+  .caracteristicas-box p {
+   font-weight: bold;
+   color: #333;
+  }
+
+  /* Servicios */
+  .services {
+   padding: 60px 20px;
+   background-color: #fff;
+   text-align: center;
+  }
+
+  .services-grid {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   max-width: 1200px;
+   margin: auto;
+  }
+
+  .services .service-box {
+   flex: 0 0 180px;
+   background: #fff;
+   padding: 15px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .services .service-box img {
+   width: 100%;
+   height: 120px;
+   object-fit: cover;
+   border-radius: 8px;
+   margin-bottom: 10px;
+  }
+
+  .services .service-box p {
+   font-weight: bold;
+   color: #333;
+  }
+
+  /* Sobre Nosotros */
+  .about-section {
+   padding: 60px 20px;
+   background-color: #f9f9f9;
   }
 
   .about-container {
@@ -178,40 +300,14 @@
   .about-image img {
    max-width: 100%;
    border-radius: 10px;
-   border: 2px dashed #f26522;
+   border: 2px dashed #FBA417;
    padding: 5px;
   }
 
-  .services-grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-   gap: 20px;
-   text-align: center;
-  }
-
-  .service-box {
-   background: #f5f5f5;
-   border-radius: 10px;
-   padding: 20px;
-   font-weight: bold;
-  }
-
-  .caracteristicas-section {
-   background-color: #f26522;
-  }
-
-  .caracteristicas-grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-   gap: 20px;
-   text-align: center;
-  }
-
-  .caracteristicas-box {
-   background: #f5f5f5;
-   border-radius: 10px;
-   padding: 20px;
-   font-weight: bold;
+  /* Galería */
+  .gallery-section {
+   padding: 60px 20px;
+   background-color: #f9f9f9;
   }
 
   .gallery {
@@ -219,26 +315,27 @@
    grid-template-columns: repeat(2, 1fr);
    gap: 20px;
    max-width: 1000px;
-   margin: 0 auto;
+   margin: auto;
   }
 
   .gallery img {
    width: 100%;
    border-radius: 8px;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
    object-fit: cover;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
+  /* Contacto */
   .contact-section {
-   background-color: #001f3f;
+   background-color: #787878;
    color: white;
+   padding: 60px 20px;
    text-align: center;
   }
 
-  .contact-section h2 {
-   font-size: 2.5rem;
-   color: #f26522;
-   margin-bottom: 40px;
+  .contact-container {
+   max-width: 1100px;
+   margin: auto;
   }
 
   .contact-cards {
@@ -249,59 +346,164 @@
   }
 
   .card {
-   background-color: #01264e;
+   background-color: #606060;
    padding: 30px 20px;
    border-radius: 10px;
    width: 300px;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-   transition: transform 0.3s ease;
-  }
-
-  .card:hover {
-   transform: translateY(-5px);
   }
 
   .card i {
    font-size: 2rem;
-   color: #f26522;
+   color: #FBA417;
    margin-bottom: 15px;
   }
 
   .card h4 {
+   font-size: 1.2rem;
    margin-bottom: 10px;
+   color: white;
   }
 
   .card a,
   .card p {
-   color: #25D366;
+   color: #FBA417;
+   text-decoration: none;
    font-size: 1rem;
   }
 
-  .contact-note {
-   margin-top: 30px;
-   font-style: italic;
-   color: #ccc;
-  }
-
+  /* Footer */
   footer {
-   background: #003366;
-   color: white;
-   text-align: center;
+   background-color: #fff;
+   color: #000;
    padding: 40px 20px 20px;
+   font-size: 0.95rem;
+   border-top: 1px solid #ccc;
   }
 
-  .footer-columns {
+  .footer-container {
    display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
    flex-wrap: wrap;
-   justify-content: center;
-   gap: 40px;
-   margin-bottom: 20px;
+   gap: 20px;
   }
 
-  .footer-columns ul li {
+  .footer-column {
+   flex: 1;
+   min-width: 200px;
+  }
+
+  .footer-logo img {
+   height: 100px;
+   display: block;
+  }
+
+  .footer-center {
+   text-align: center;
+  }
+
+  .social-icons {
+   margin-bottom: 15px;
+  }
+
+  .social-icons a {
+   margin: 0 10px;
+   font-size: 1.8rem;
+   color: #000;
+   transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+   color: #f26522;
+  }
+
+  .contact-info p {
+   margin: 8px 0;
+   font-size: 1.1rem;
+  }
+
+  .footer-links {
+   text-align: right;
+  }
+
+  .footer-links a {
+   display: block;
    margin-bottom: 8px;
+   text-decoration: none;
+   color: #000;
+   font-weight: 500;
   }
 
+  .footer-links a:hover {
+   color: #f26522;
+   text-decoration: underline;
+  }
+
+  .footer-bottom {
+   border-top: 1px solid #eee;
+   margin-top: 30px;
+   padding-top: 15px;
+   text-align: center;
+   font-size: 0.85rem;
+  }
+
+  .footer-bottom a {
+   color: #000;
+   text-decoration: none;
+  }
+
+  .footer-bottom a:hover {
+   text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+   .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    /* antes era center */
+    text-align: center;
+   }
+
+   .footer-logo {
+    align-self: center;
+    /* Lo centra en el contenedor flex */
+    margin: 0 auto 20px;
+    /* Centrado horizontal con margen abajo */
+    display: block;
+    text-align: center;
+   }
+
+   .footer-logo img {
+    display: block;
+    margin: 0 auto;
+   }
+
+   .footer-logo {
+    align-self: flex-start;
+    margin-bottom: 20px;
+   }
+
+   .footer-center {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+   }
+
+   .footer-links {
+    width: 100%;
+    text-align: center;
+   }
+
+   .footer-links a {
+    display: inline-block;
+    margin: 5px 10px;
+   }
+  }
+
+
+  /* WhatsApp Float */
   .whatsapp-float {
    position: fixed;
    width: 60px;
@@ -311,43 +513,19 @@
    background-color: #25D366;
    color: white;
    border-radius: 50%;
-   font-size: 40px;
+   font-size: 30px;
    display: flex;
-   justify-content: center;
    align-items: center;
+   justify-content: center;
    z-index: 1000;
-  }
-
-  @media (max-width: 768px) {
-   .hamburger {
-    display: block;
-   }
-
-   .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #003366;
-    padding: 10px 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 999;
-   }
-
-   ul.nav-links.active {
-    display: flex;
-   }
-
-   .nav-links li {
-    padding: 10px;
-    text-align: center;
-   }
+   text-decoration: none;
   }
  </style>
 </head>
 
+
 <body>
+ <!-- Top Bar -->
  <header>
   <div class="top-bar">
    <span>Remolques, auxilios, traslados especiales</span>
@@ -355,36 +533,85 @@
    <a href="tel:+5491123456789" class="call-button">📞 +54 911 2345 6789</a>
   </div>
 
+  <!-- Navbar -->
   <nav class="navbar">
-   <div class="logo">RESCATE VIAL</div>
-   <button class="hamburger" id="hamburger-btn" aria-label="Menú">
+   <div><img src="imagenes/logo.png" alt="logo"></div>
+   <div class="menu-toggle" onclick="toggleMenu()">
     <i class="fas fa-bars"></i>
-   </button>
-   <ul class="nav-links" id="nav-menu">
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#">Quienes somos</a></li>
-    <li><a href="#">Servicios</a></li>
-    <li><a href="#">Galería</a></li>
-    <li><a href="#">Contacto</a></li>
+   </div>
+   <ul class="nav-links" id="navLinks">
+    <li><a href="#home">INICIO</a></li>
+    <li><a href="#servicios">SERVICIOS</a></li>
+    <li><a href="#about">QUIENES SOMOS</a></li>
+    <li><a href="#galeria">GALERÍA</a></li>
+    <li><a href="#contacto">CONTACTO</a></li>
    </ul>
   </nav>
  </header>
 
  <!-- Carrusel -->
- <div class="carousel">
+ <div class="carousel" id="home">
   <div class="slides">
-   <div class="slide" style="background-image:url('imagenes/b1.jpg');"></div>
-   <div class="slide" style="background-image:url('imagenes/b2.jpg');"></div>
-   <div class="slide" style="background-image:url('imagenes/b3.jpg');"></div>
+   <div class="slide" style="background-image:url('Imagenes/b1.jpg');"></div>
+   <div class="slide" style="background-image:url('Imagenes/b2.jpg');"></div>
+   <div class="slide" style="background-image:url('Imagenes/b3.jpg');"></div>
   </div>
   <div class="hero-text">
-   <h1>SERVICIO DE ASISTENCIA<br>VEHICULAR</h1>
-   <p>Estamos disponibles 24/7 para ayudarte con traslados, remolques y más en todo el AMBA.</p>
+   <h1>SERVICIO DE ASISTENCIA VEHICULAR</h1>
+   <p>Estamos donde nos necesites, 24/7.</p>
   </div>
  </div>
 
+ <!-- Características -->
+ <section id="caracteristicas" class="caracteristicas-section">
+  <div class="caracteristicas-grid">
+   <div class="caracteristicas-box"><i class="fas fa-user-check"></i>
+    <p>Atención personalizada</p>
+   </div>
+   <div class="caracteristicas-box"><i class="fas fa-tools"></i>
+    <p>Personal calificado</p>
+   </div>
+   <div class="caracteristicas-box"><i class="fas fa-clock"></i>
+    <p>Puntualidad</p>
+   </div>
+   <div class="caracteristicas-box"><i class="fas fa-check-circle"></i>
+    <p>Responsabilidad</p>
+   </div>
+   <div class="caracteristicas-box"><i class="fas fa-shield-alt"></i>
+    <p>Seguridad</p>
+   </div>
+   <div class="caracteristicas-box"><i class="fas fa-truck"></i>
+    <p>Unidad equipada</p>
+   </div>
+  </div>
+ </section>
+
+ <!-- Servicios -->
+ <section id="servicios" class="services">
+  <div class="services-grid">
+   <div class="service-box"><img src="imagenes/b1.jpg" alt="">
+    <p>Remolques 24hs</p>
+   </div>
+   <div class="service-box"><img src="imagenes/b2.jpg" alt="">
+    <p>Traslados Especiales</p>
+   </div>
+   <div class="service-box"><img src="imagenes/b3.jpg" alt="">
+    <p>Traslados Largos</p>
+   </div>
+   <div class="service-box"><img src="imagenes/b1.jpg" alt="">
+    <p>Asistencia en Ruta</p>
+   </div>
+   <div class="service-box"><img src="imagenes/b2.jpg" alt="">
+    <p>Emergencias Urbanas</p>
+   </div>
+   <div class="service-box"><img src="imagenes/b3.jpg" alt="">
+    <p>Cobertura AMBA</p>
+   </div>
+  </div>
+ </section>
+
  <!-- Sobre Nosotros -->
- <section class="about-section">
+ <section id="about" class="about-section">
   <div class="about-container">
    <div class="about-text">
     <h2>Un poco sobre nosotros</h2>
@@ -397,41 +624,15 @@
   </div>
  </section>
 
-
-
- <!-- Caracteristicas Destacadas -->
- <section class="caracteristicas-section">
-  <div class="caracteristicas-grid">
-   <div class="caracteristicas-box">Atención personalizada</div>
-   <div class="caracteristicas-box">Personal calificado</div>
-   <div class="caracteristicas-box">Puntualidad</div>
-   <div class="caracteristicas-box">Responsabilidad</div>
-   <div class="caracteristicas-box">Seguridad</div>
-   <div class="caracteristicas-box">Unidad Completamente Equipada</div>
-  </div>
- </section>
-
- <!-- Servicios -->
- <section class="services">
-  <div class="services-grid">
-   <div class="service-box">Remolques 24hs</div>
-   <div class="service-box">Traslados Especiales</div>
-   <div class="service-box">Traslados Largos</div>
-   <div class="service-box">Asistencia en Ruta</div>
-   <div class="service-box">Emergencias Urbanas</div>
-   <div class="service-box">Cobertura AMBA</div>
-  </div>
- </section>
-
  <!-- Galería -->
- <section class="gallery-section">
+ <section id="galeria" class="gallery-section">
   <div class="gallery">
-   <img src="imagenes/b1.jpg" alt="Vehículo 1" />
-   <img src="imagenes/b2.jpg" alt="Vehículo 2" />
-   <img src="imagenes/b3.jpg" alt="Vehículo 3" />
-   <img src="imagenes/b1.jpg" alt="Vehículo 4" />
-   <img src="imagenes/b2.jpg" alt="Vehículo 2" />
-   <img src="imagenes/b3.jpg" alt="Vehículo 3" />
+   <img src="imagenes/b1.jpg" alt="">
+   <img src="imagenes/b2.jpg" alt="">
+   <img src="imagenes/b3.jpg" alt="">
+   <img src="imagenes/b1.jpg" alt="">
+   <img src="imagenes/b2.jpg" alt="">
+   <img src="imagenes/b3.jpg" alt="">
   </div>
  </section>
 
@@ -440,62 +641,81 @@
   <div class="contact-container">
    <h2>Contacto</h2>
    <div class="contact-cards">
-    <div class="card">
-     <i class="fas fa-phone"></i>
-     <h4>Teléfono / WhatsApp</h4>
-     <a href="https://wa.me/5491123456789" target="_blank">+54 9 11 2345-6789</a>
+    <div class="card"><i class="fas fa-phone"></i>
+     <h4>Teléfono</h4><a href="https://wa.me/5491123456789">+54 9 11 2345-6789</a>
     </div>
-    <div class="card">
-     <i class="fas fa-envelope"></i>
-     <h4>Email</h4>
-     <a href="mailto:info@rescatevial.com.ar">info@rescatevial.com.ar</a>
+    <div class="card"><i class="fas fa-envelope"></i>
+     <h4>Email</h4><a href="mailto:info@rescatevial.com.ar">info@rescatevial.com.ar</a>
     </div>
-    <div class="card">
-     <i class="fas fa-map-marker-alt"></i>
+    <div class="card"><i class="fas fa-map-marker-alt"></i>
      <h4>Dirección</h4>
-     <p>Av. Santa Fe 1234, Palermo, Buenos Aires</p>
+     <p>Av. Santa Fe 1234, Palermo</p>
     </div>
    </div>
-   <p class="contact-note">También podés escribirnos por Instagram o WhatsApp. ¡Te esperamos!</p>
   </div>
  </section>
-
- <!-- Footer -->
- <footer>
-  <div class="footer-columns">
-   <div>
-    <h4>Rescate Vial</h4>
-    <p>Servicio profesional de auxilio mecánico y remolques en Buenos Aires y alrededores.</p>
-   </div>
-  </div>
-  <p>Política de Privacidad | © 2025 Rescate Vial. Todos los derechos reservados.</p>
- </footer>
 
  <!-- Botón WhatsApp -->
  <a href="https://wa.me/5491156328935" target="_blank" class="whatsapp-float">
   <i class="fab fa-whatsapp"></i>
  </a>
 
- <!-- JS Carrusel + Menú Hamburguesa -->
+ <footer>
+  <div class="footer-container">
+   <!-- Izquierda: logo -->
+   <div class="footer-column footer-logo">
+    <img src="imagenes/logo.png" alt="Rescate Vial Logo">
+   </div>
 
+   <!-- Centro: redes y contacto -->
+   <div class="footer-column footer-center">
+    <!-- Redes sociales -->
+    <div class="social-icons">
+     <a href="#"><i class="fab fa-facebook-f"></i></a>
+     <a href="#"><i class="fab fa-instagram"></i></a>
+     <a href="#"><i class="fab fa-linkedin-in"></i></a>
+     <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <!-- Datos de contacto -->
+    <div class="contact-info">
+     <p><i class="fas fa-phone"></i> +54 911 2345 6789</p>
+     <p><i class="fas fa-envelope"></i> info@rescatevial.com.ar</p>
+    </div>
+   </div>
+
+   <!-- Derecha: links a secciones -->
+   <div class="footer-column footer-links">
+    <a href="#home">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#about">Quienes somos</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+   </div>
+  </div>
+
+  <!-- Derechos reservados -->
+  <div class="footer-bottom">
+   <p>© 2025 Rescate Vial - Todos los derechos reservados | <a href="#">Política de Privacidad</a></p>
+  </div>
+ </footer>
+
+
+
+ <!-- Scripts -->
  <script>
-  // Carrusel automático
   let slideIndex = 0;
   const slides = document.querySelector(".slides");
   const totalSlides = document.querySelectorAll(".slide").length;
-
   setInterval(() => {
    slideIndex = (slideIndex + 1) % totalSlides;
-   slides.style.transform = "translateX(" + -slideIndex * 100 + "%";
+   slides.style.transform = "translateX(" + -slideIndex * 100 + "%)";
   }, 4000);
 
-  // Menú hamburguesa
-  const hamburger = document.getElementById("hamburger-btn");
-  const navMenu = document.getElementById("nav-menu");
-
-  hamburger.addEventListener("click", () => {
-   navMenu.classList.toggle("active");
-  });
+  function toggleMenu() {
+   const nav = document.getElementById("navLinks");
+   nav.classList.toggle("active");
+  }
  </script>
 </body>
 
