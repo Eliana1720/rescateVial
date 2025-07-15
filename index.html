@@ -193,39 +193,61 @@
   }
 
   /* Características */
-  .caracteristicas-section {
-   background-color: #f9f9f9;
+  .stats-section {
+   background-color: #1e1e1e;
+   color: #fff;
    padding: 60px 20px;
    text-align: center;
   }
 
-  .caracteristicas-grid {
+  .stats-grid {
    display: flex;
-   flex-wrap: wrap;
    justify-content: center;
-   gap: 20px;
+   flex-wrap: wrap;
    max-width: 1200px;
-   margin: auto;
+   margin: 0 auto;
   }
 
-  .caracteristicas-box {
-   flex: 0 0 150px;
-   background: #fff;
-   padding: 20px;
-   border-radius: 10px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   text-align: center;
+  .stat-box {
+   flex: 1 1 180px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 30px 20px;
+   border-left: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  .caracteristicas-box i {
-   font-size: 2rem;
+  .stat-box:first-child {
+   border-left: none;
+  }
+
+  .stat-box i {
+   font-size: 3rem;
    color: #FBA417;
-   margin-bottom: 10px;
+   margin-bottom: 12px;
   }
 
-  .caracteristicas-box p {
-   font-weight: bold;
-   color: #333;
+  .stat-box p {
+   font-size: 0.9rem;
+   text-transform: uppercase;
+   color: #fff;
+   letter-spacing: 1px;
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+   .stats-grid {
+    flex-direction: column;
+   }
+
+   .stat-box {
+    border-left: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   }
+
+   .stat-box:last-child {
+    border-bottom: none;
+   }
   }
 
   /* Servicios */
@@ -563,25 +585,31 @@
  </div>
 
  <!-- Características -->
- <section id="caracteristicas" class="caracteristicas-section">
-  <div class="caracteristicas-grid">
-   <div class="caracteristicas-box"><i class="fas fa-user-check"></i>
-    <p>Atención personalizada</p>
+ <section id="caracteristicas" class="stats-section">
+  <div class="stats-grid">
+   <div class="stat-box stat-box-atencion">
+    <i class="fas fa-user-check"></i>
+    <p>ATENCIÓN PERSONALIZADA</p>
    </div>
-   <div class="caracteristicas-box"><i class="fas fa-tools"></i>
-    <p>Personal calificado</p>
+   <div class="stat-box">
+    <i class="fas fa-clock"></i>
+    <p>PUNTUALIDAD</p>
    </div>
-   <div class="caracteristicas-box"><i class="fas fa-clock"></i>
-    <p>Puntualidad</p>
+   <div class="stat-box">
+    <i class="fas fa-tools"></i>
+    <p>PERSONAL CALIFICADO</p>
    </div>
-   <div class="caracteristicas-box"><i class="fas fa-check-circle"></i>
-    <p>Responsabilidad</p>
+   <div class="stat-box">
+    <i class="fas fa-check-circle"></i>
+    <p>RESPONSABILIDAD</p>
    </div>
-   <div class="caracteristicas-box"><i class="fas fa-shield-alt"></i>
-    <p>Seguridad</p>
+   <div class="stat-box">
+    <i class="fas fa-shield-alt"></i>
+    <p>SEGURIDAD</p>
    </div>
-   <div class="caracteristicas-box"><i class="fas fa-truck"></i>
-    <p>Unidad equipada</p>
+   <div class="stat-box">
+    <i class="fas fa-truck"></i>
+    <p>UNIDADES EQUIPADAS</p>
    </div>
   </div>
  </section>
