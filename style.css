@@ -287,7 +287,7 @@ body {
 @media (max-width: 768px) {
  .hero-text {
  position: absolute;
- top: 52%;
+ top: 55%;
  left: 21%;
  color: white;
  z-index: 10;
