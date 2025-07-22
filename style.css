@@ -157,7 +157,7 @@ body {
 /* Menú mobile */
 @media (max-width: 768px) {
  .navbar-horizontal {
- top: 52px;
+ top: 50px;
  padding: 5px 40px;
   }
 
