@@ -28,15 +28,20 @@
  <!-- Top Bar -->
  <header>
   <div class="top-bar">
-   <span>Remolques, auxilios, traslados especiales</span>
    <span>Buenos Aires - Argentina</span>
-   <a href="tel:+5491123456789" class="call-button">📞 +54 911 2345 6789</a>
+   <span class="divider">|</span>
+   <div class="top-bar-phones">
+    <img src="imagenes/topbarLogo.png" class="topbarImage">
+    <a href="https://wa.me/5491112345678">+54 911 1234-5678</a>
+    <span class="divider divider-mobile">|</span> <!-- NUEVO: solo para mobile -->
+    <i class="fas fa-phone"></i>
+    <a href="tel:01112345678">011 1234-5678</a>
+   </div>
   </div>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-   <div><img src="imagenes/logo.png" alt="logo"></div>
-   <div class="menu-toggle" onclick="toggleMenu()">
+
+  <nav class="navbar-horizontal">
+   <div class="menu-toggle">
     <i class="fas fa-bars"></i>
    </div>
    <ul class="nav-links" id="navLinks">
@@ -51,15 +56,26 @@
 
  <!-- Carrusel -->
  <div class="carousel" id="home">
+  <!-- Logo y menú dentro del carrusel -->
+  <nav class="navbar overlay-navbar">
+   <div class="logo-large">
+    <img src="imagenes/logoOscuro.png" alt="logo">
+   </div>
+
+  </nav>
+
   <div class="slides">
-   <div class="slide" style="background-image:url('imagenes/b1.jpg');"></div>
-   <div class="slide" style="background-image:url('imagenes/b2.jpg');"></div>
-   <div class="slide" style="background-image:url('imagenes/b3.jpg');"></div>
+   <div class="slide" style="background-image:url('imagenes/C1.jpg');"></div>
+   <div class="slide" style="background-image:url('imagenes/C2.jpg');"></div>
+   <div class="slide" style="background-image:url('imagenes/C3.jpg');"></div>
+   <div class="slide" style="background-image:url('imagenes/C4.jpg');"></div>
+   <div class="slide" style="background-image:url('imagenes/C5.jpg');"></div>
+   <div class="slide" style="background-image:url('imagenes/C6.jpg');"></div>
   </div>
-  <div class="hero-text">
-   <h1>SERVICIO DE ASISTENCIA VEHICULAR</h1>
-   <p>Estamos donde nos necesites, 24/7.</p>
-  </div>
+ </div>
+ <div class="hero-text">
+  <h1>SERVICIO DE REMOLQUES Y AUXILIOS</h1>
+ </div>
  </div>
 
  <!-- Características -->
@@ -92,6 +108,24 @@
   </div>
  </section>
 
+ <!-- Servicios -->
+ <section id="servicios" class="services">
+  <div class="services-grid">
+   <div class="service-box"><img src="imagenes/ASISTENCIA VEHICULAR.jpg" alt="">
+    <p>ASISTENCIA VEHICULAR</p>
+   </div>
+   <div class="service-box"><img src="imagenes/TRASLADOS ESPECIALES.jpg" alt="">
+    <p>TRASLADOS ESPECIALES</p>
+   </div>
+   <div class="service-box"><img src="imagenes/TRASLADOS A TODO EL PAÍS.jpg" alt="">
+    <p>TRASLADOS A TODO EL PAÍS</p>
+   </div>
+   <div class="service-box"><img src="imagenes/SERVICIOS EMPRESARIALES.jpg" alt="">
+    <p>SERVICIOS EMPRESARIALES</p>
+   </div>
+  </div>
+ </section>
+
  <!-- Sobre Nosotros -->
  <section id="about" class="about-section">
   <div class="about-container">
@@ -101,31 +135,7 @@
      profesionales en todo Buenos Aires.</p>
    </div>
    <div class="about-image">
-    <img src="imagenes/b2.jpg" alt="Equipo de rescate vial" />
-   </div>
-  </div>
- </section>
-
- <!-- Servicios -->
- <section id="servicios" class="services">
-  <div class="services-grid">
-   <div class="service-box"><img src="imagenes/b1.jpg" alt="">
-    <p>Remolques 24hs</p>
-   </div>
-   <div class="service-box"><img src="imagenes/b2.jpg" alt="">
-    <p>Traslados Especiales</p>
-   </div>
-   <div class="service-box"><img src="imagenes/b3.jpg" alt="">
-    <p>Traslados Largos</p>
-   </div>
-   <div class="service-box"><img src="imagenes/b1.jpg" alt="">
-    <p>Asistencia en Ruta</p>
-   </div>
-   <div class="service-box"><img src="imagenes/b2.jpg" alt="">
-    <p>Emergencias Urbanas</p>
-   </div>
-   <div class="service-box"><img src="imagenes/b3.jpg" alt="">
-    <p>Cobertura AMBA</p>
+    <img src="imagenes/QS.jpg" alt="Equipo de rescate vial" />
    </div>
   </div>
  </section>
@@ -133,12 +143,12 @@
  <!-- Galería -->
  <section id="galeria" class="gallery-section">
   <div class="gallery">
-   <img src="imagenes/b1.jpg" alt="">
-   <img src="imagenes/b2.jpg" alt="">
-   <img src="imagenes/b3.jpg" alt="">
-   <img src="imagenes/b1.jpg" alt="">
-   <img src="imagenes/b2.jpg" alt="">
-   <img src="imagenes/b3.jpg" alt="">
+   <img src="imagenes/C1.jpg" alt="">
+   <img src="imagenes/C2.jpg" alt="">
+   <img src="imagenes/C4.jpg" alt="">
+   <img src="imagenes/C5.jpg" alt="">
+   <img src="imagenes/C6.jpg" alt="">
+   <img src="imagenes/C3.jpg" alt="">
   </div>
  </section>
 
@@ -162,7 +172,7 @@
  </section>
 
  <!-- Botón WhatsApp -->
- <a href="https://wa.me/5491156328935" target="_blank" class="whatsapp-float">
+ <a href="https://wa.me/5491112345678" target="_blank" class="whatsapp-float">
   <i class="fab fa-whatsapp"></i>
  </a>
 
