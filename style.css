@@ -197,17 +197,17 @@ body {
   margin-bottom: 12px;
  }
 
-  .nav-links li a {
-   color: black;
-   text-decoration: none;
-   font-weight: bold;
-   font-size: 15px;
-   text-shadow: none;
-  }
+ .nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  text-shadow: none;
+ }
 
-    .nav-links a:hover {
-     color: #fba417;
-    }
+ .nav-links a:hover {
+  color: #fba417;
+ }
 
  .nav-links a {
   font-size: 1rem;
@@ -216,24 +216,25 @@ body {
   text-shadow: none;
  }
   /* Logo grande y navbar superpuestos al carrusel */
-  .overlay-navbar {
-   position: absolute;
-   top: 53px;
-   left: -30px;
-   width: 100%;
-   z-index: 15;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 0 40px;
-  }
+ .overlay-navbar {
+  position: absolute;
+  top: 53px;
+  left: -30px;
+  width: 100%;
+  z-index: 15;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+ }
  
-  .logo-large img {
-   width: 220px;
-   box-shadow: none;
-   background-color: transparent;
+ .logo-large img {
+  width: 220px;
+  box-shadow: none;
+  background-color: transparent;
+ }
 }
-}
+
 /* Carrusel */
 .carousel {
  position: relative;
@@ -604,6 +605,7 @@ body {
   right: -50px;
  }
 }
+
 /* Galería */
 .gallery-section {
  padding: 60px 20px;
