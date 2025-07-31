@@ -233,6 +233,17 @@ body {
   box-shadow: none;
   background-color: transparent;
  }
+}/* Logo en el hero */
+#hero {
+  background: url('imagenes/logoOscuro.png') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  padding: 2rem;
+}
+
+.logo-hero {
+  max-width: 200px;
+  height: auto;
 }
 
 /* Carrusel */
@@ -760,18 +771,7 @@ body {
  }
 }
 
-/* Logo en el hero */
-#hero {
-  background: url('imagenes/logoOscuro.png') center/cover no-repeat;
-  height: 100vh;
-  position: relative;
-  padding: 2rem;
-}
 
-.logo-hero {
-  max-width: 200px;
-  height: auto;
-}
 
 /* WhatsApp flotante */
 .whatsapp-float {
