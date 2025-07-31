@@ -762,7 +762,7 @@ body {
 
 /* Logo en el hero */
 #hero {
-  background: url('img/hero.jpg') center/cover no-repeat;
+  background: url('imagenes/logoOscuro.png') center/cover no-repeat;
   height: 100vh;
   position: relative;
   padding: 2rem;
