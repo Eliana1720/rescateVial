@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RESCATE VIAL</title>
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,16 +17,14 @@
   <!-- Favicon -->
   <link rel="icon" type="image/jpg" href="imagenes/logoOscuro.png">
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <!-- Estilos personalizados -->
+  <!-- Tu CSS personalizado -->
   <link rel="stylesheet" href="style.css">
-  <script src="main.js" defer></script>
+
+  <!-- Tu JS -->
+  <script defer src="main.js"></script>
 </head>
 
 <body>
@@ -32,25 +33,26 @@
   <header>
     <div class="top-bar d-flex justify-content-between align-items-center px-3 py-2">
       <span>Buenos Aires - Argentina</span>
-      <span class="divider">|</span>
+      <span class="divider d-none d-md-inline">|</span>
       <div class="top-bar-phones d-flex align-items-center gap-2">
-        <img src="imagenes/topbarLogo.png" class="topbarImage">
+        <img src="imagenes/topbarLogo.png" class="topbarImage" alt="Logo Teléfono">
         <a href="https://wa.me/5491154722664">+54 911 54722664</a>
-        <span class="divider divider-mobile">|</span>
+        <span class="divider divider-mobile d-md-none">|</span>
         <i class="fas fa-phone"></i>
         <a href="tel:01112345678">011 5472-2664</a>
       </div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-horizontal">
-      <div class="container">
-        <a class="navbar-brand d-lg-none" href="#"><img src="imagenes/logoOscuro.png" alt="logo" width="50"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks"
-          aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Menú de navegación -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="imagenes/logoOscuro.png" alt="logo" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navLinks">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="#home">INICIO</a></li>
             <li class="nav-item"><a class="nav-link" href="#servicios">SERVICIOS</a></li>
@@ -66,46 +68,45 @@
   <!-- Carrusel -->
   <div id="home" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active" style="background-image: url('imagenes/C1.jpg'); background-size: cover; height: 400px;"></div>
-      <div class="carousel-item" style="background-image: url('imagenes/C2.jpg'); background-size: cover; height: 400px;"></div>
-      <div class="carousel-item" style="background-image: url('imagenes/C3.jpg'); background-size: cover; height: 400px;"></div>
-      <div class="carousel-item" style="background-image: url('imagenes/C4.jpg'); background-size: cover; height: 400px;"></div>
-      <div class="carousel-item" style="background-image: url('imagenes/C5.jpg'); background-size: cover; height: 400px;"></div>
-      <div class="carousel-item" style="background-image: url('imagenes/C6.jpg'); background-size: cover; height: 400px;"></div>
+      <div class="carousel-item active" style="background-image:url('imagenes/C1.jpg'); background-size:cover; height:70vh;"></div>
+      <div class="carousel-item" style="background-image:url('imagenes/C2.jpg'); background-size:cover; height:70vh;"></div>
+      <div class="carousel-item" style="background-image:url('imagenes/C3.jpg'); background-size:cover; height:70vh;"></div>
+      <div class="carousel-item" style="background-image:url('imagenes/C4.jpg'); background-size:cover; height:70vh;"></div>
+      <div class="carousel-item" style="background-image:url('imagenes/C5.jpg'); background-size:cover; height:70vh;"></div>
+      <div class="carousel-item" style="background-image:url('imagenes/C6.jpg'); background-size:cover; height:70vh;"></div>
     </div>
   </div>
-
-  <div class="hero-text text-center my-4">
+  <div class="hero-text text-center p-3">
     <h1>SERVICIO DE REMOLQUES Y AUXILIOS</h1>
   </div>
 
   <!-- Servicios -->
   <section id="servicios" class="py-5">
     <div class="container text-center">
-      <h2 class="servicios-titulo mb-4">Nuestros Servicios</h2>
-      <div class="row servicios-grid">
-        <div class="col-md-6 col-lg-3 mb-4">
+      <h2 class="mb-4 servicios-titulo">Nuestros Servicios</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
           <div class="servicio-card">
             <img src="imagenes/ASISTENCIA VEHICULAR.jpg" alt="Asistencia Vehicular" class="img-fluid">
             <h3>Asistencia Vehicular</h3>
             <p>Auxilio rápido ante cualquier inconveniente mecánico o eléctrico.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-3">
           <div class="servicio-card">
             <img src="imagenes/TRASLADOS ESPECIALES.jpg" alt="Traslados Especiales" class="img-fluid">
             <h3>Traslados Especiales</h3>
             <p>Movilidad segura de vehículos premium o de competición.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-3">
           <div class="servicio-card">
             <img src="imagenes/TRASLADOS A TODO EL PAÍS.jpg" alt="Traslados a Todo el País" class="img-fluid">
             <h3>Traslados a Todo el País</h3>
             <p>Servicio de traslado disponible en todo el territorio nacional.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4">
+        <div class="col-md-6 col-lg-3">
           <div class="servicio-card">
             <img src="imagenes/SERVICIOS EMPRESARIALES.jpg" alt="Servicios Empresariales" class="img-fluid">
             <h3>Servicios Empresariales</h3>
@@ -117,31 +118,31 @@
   </section>
 
   <!-- Características -->
-  <section id="caracteristicas" class="stats-section py-5 bg-light">
+  <section id="caracteristicas" class="py-5 bg-light">
     <div class="container">
-      <div class="row g-3 justify-content-center">
-        <div class="col-6 col-md-4 col-lg-2 text-center stat-box stat-box-atencion">
-          <i class="fas fa-user-check fa-2x mb-2"></i>
+      <div class="row text-center">
+        <div class="col-6 col-md-4 col-lg-2 mb-4">
+          <i class="fas fa-user-check fa-2x"></i>
           <p>ATENCIÓN PERSONALIZADA</p>
         </div>
-        <div class="col-6 col-md-4 col-lg-2 text-center stat-box">
-          <i class="fas fa-clock fa-2x mb-2"></i>
+        <div class="col-6 col-md-4 col-lg-2 mb-4">
+          <i class="fas fa-clock fa-2x"></i>
           <p>PUNTUALIDAD</p>
         </div>
-        <div class="col-6 col-md-4 col-lg-2 text-center stat-box">
-          <i class="fas fa-tools fa-2x mb-2"></i>
+        <div class="col-6 col-md-4 col-lg-2 mb-4">
+          <i class="fas fa-tools fa-2x"></i>
           <p>PERSONAL CALIFICADO</p>
         </div>
-        <div class="col-6 col-md-4 col-lg-2 text-center stat-box">
-          <i class="fas fa-check-circle fa-2x mb-2"></i>
+        <div class="col-6 col-md-4 col-lg-2 mb-4">
+          <i class="fas fa-check-circle fa-2x"></i>
           <p>RESPONSABILIDAD</p>
         </div>
-        <div class="col-6 col-md-4 col-lg-2 text-center stat-box">
-          <i class="fas fa-shield-alt fa-2x mb-2"></i>
+        <div class="col-6 col-md-4 col-lg-2 mb-4">
+          <i class="fas fa-shield-alt fa-2x"></i>
           <p>SEGURIDAD</p>
         </div>
-        <div class="col-6 col-md-4 col-lg-2 text-center stat-box">
-          <i class="fas fa-truck fa-2x mb-2"></i>
+        <div class="col-6 col-md-4 col-lg-2 mb-4">
+          <i class="fas fa-truck fa-2x"></i>
           <p>UNIDAD TOTALMENTE EQUIPADA</p>
         </div>
       </div>
@@ -149,91 +150,90 @@
   </section>
 
   <!-- Sobre Nosotros -->
-  <section id="about" class="about-section py-5">
+  <section id="about" class="py-5">
     <div class="container">
-      <div class="section-divider text-center mb-4">
+      <div class="text-center mb-4">
         <h2><span>¿Quiénes Somos?</span></h2>
       </div>
       <div class="row align-items-center">
-        <div class="col-md-6 about-text">
-          <p>Somos especialistas en asistencia vehicular, con años de experiencia brindando soluciones rápidas, seguras y
-            profesionales en todo Buenos Aires.</p>
+        <div class="col-md-6">
+          <p>Somos especialistas en asistencia vehicular, con años de experiencia brindando soluciones rápidas, seguras y profesionales en todo Buenos Aires.</p>
         </div>
-        <div class="col-md-6 about-image">
-          <img src="imagenes/QS.jpg" alt="Equipo de rescate vial" class="img-fluid" />
+        <div class="col-md-6">
+          <img src="imagenes/QS.jpg" alt="Equipo de rescate vial" class="img-fluid">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Galería -->
-  <section id="galeria" class="gallery-section py-5 bg-light">
-    <div class="container gallery d-flex flex-wrap justify-content-center gap-2">
-      <img src="imagenes/C1.jpg" alt="" class="img-fluid" style="max-width: 200px;">
-      <img src="imagenes/C2.jpg" alt="" class="img-fluid" style="max-width: 200px;">
-      <img src="imagenes/C4.jpg" alt="" class="img-fluid" style="max-width: 200px;">
-      <img src="imagenes/C5.jpg" alt="" class="img-fluid" style="max-width: 200px;">
-      <img src="imagenes/C6.jpg" alt="" class="img-fluid" style="max-width: 200px;">
-      <img src="imagenes/C3.jpg" alt="" class="img-fluid" style="max-width: 200px;">
+  <section id="galeria" class="py-5 gallery-section bg-light">
+    <div class="container">
+      <div class="row g-2">
+        <div class="col-6 col-md-4"><img src="imagenes/C1.jpg" class="img-fluid" alt=""></div>
+        <div class="col-6 col-md-4"><img src="imagenes/C2.jpg" class="img-fluid" alt=""></div>
+        <div class="col-6 col-md-4"><img src="imagenes/C4.jpg" class="img-fluid" alt=""></div>
+        <div class="col-6 col-md-4"><img src="imagenes/C5.jpg" class="img-fluid" alt=""></div>
+        <div class="col-6 col-md-4"><img src="imagenes/C6.jpg" class="img-fluid" alt=""></div>
+        <div class="col-6 col-md-4"><img src="imagenes/C3.jpg" class="img-fluid" alt=""></div>
+      </div>
     </div>
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="contact-section py-5">
+  <section id="contacto" class="py-5 contact-section">
     <div class="container text-center">
-      <h2 class="contact-title mb-4">Contáctanos</h2>
-      <div class="row contact-cards">
-        <div class="col-sm-6 col-lg-3 mb-4">
+      <h2 class="mb-4 contact-title">Contáctanos</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-3">
           <div class="card p-3">
             <i class="fas fa-map-marker-alt fa-2x"></i>
             <h4>Dirección</h4>
             <p>Buenos Aires - Argentina</p>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-3 mb-4">
+        <div class="col-6 col-md-3">
           <div class="card p-3">
             <i class="fas fa-phone fa-2x"></i>
             <h4>Teléfono</h4>
             <a href="tel:1154722664">1154722664</a>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-3 mb-4">
+        <div class="col-6 col-md-3">
           <div class="card p-3">
             <i class="fab fa-whatsapp fa-2x"></i>
             <h4>WhatsApp</h4>
             <a href="https://wa.me/5491154722664">+54 9 11 5472-2664</a>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-3 mb-4">
+        <div class="col-6 col-md-3">
           <div class="card p-3">
             <i class="fab fa-instagram fa-2x"></i>
             <h4>Instagram</h4>
-            <a href="https://www.instagram.com/rescatevial.remolquesyauxilios?igsh=ZzV2dnNnbW96djF4" target="_blank">
-              <span>Seguinos</span>
-            </a>
+            <a href="https://www.instagram.com/rescatevial.remolquesyauxilios?igsh=ZzV2dnNnbW96djF4" target="_blank">Seguinos</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Botón WhatsApp flotante -->
-  <a href="https://wa.me/5491154722664" target="_blank" class="whatsapp-float position-fixed bottom-0 end-0 m-4">
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/5491154722664" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp fa-2x"></i>
   </a>
 
   <!-- Footer -->
-  <footer class="footer bg-dark text-white text-center py-4">
-    <div class="footer-content">
-      <div class="footer-logo mb-2">
-        <img src="imagenes/logo.png" alt="Rescate Vial - Remolques" style="max-height: 80px;">
-      </div>
-      <div class="footer-copy">
-        &copy; 2025 Derechos Reservados
-      </div>
+  <footer class="footer bg-dark text-white text-center py-3">
+    <div class="footer-logo mb-2">
+      <img src="imagenes/logo.png" alt="Rescate Vial - Remolques" height="60">
+    </div>
+    <div class="footer-copy">
+      &copy; 2025 Derechos Reservados
     </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
