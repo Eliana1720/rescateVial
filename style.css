@@ -110,10 +110,6 @@ body {
  background: transparent;
 }
 
-.logo-large img {
- width: 380px;
-}
-
 /* Ícono hamburguesa */
 .menu-toggle {
  font-size: 1.5rem;
@@ -215,32 +211,28 @@ body {
   color: #000;
   text-shadow: none;
  }
-  /* Logo grande y navbar superpuestos al carrusel */
- .overlay-navbar {
-  position: absolute;
-  top: 53px;
-  left: -30px;
-  width: 100%;
-  z-index: 15;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
- }
- 
- .logo-large img {
-  width: 220px;
-  box-shadow: none;
-  background-color: transparent;
- }
 }
 
 /* Carrusel */
 .carousel {
  position: relative;
+ height: 100vh;
  overflow: hidden;
- height: 90vh;
- /* espacio para que no choque con el menú fijo */
+}
+
+.carousel-content {
+ position: absolute;
+ z-index: 10;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ text-align: left;
+ padding: 20px;
 }
 
 .carousel::before {
@@ -254,6 +246,7 @@ body {
  z-index: 5;
 }
 
+/* Fondo del carrusel */
 .slides {
  display: flex;
  height: 100%;
@@ -266,82 +259,61 @@ body {
  background-position: center;
 }
 
-.hero-text {
- position: absolute;
- top: calc(50% + 110px);
- /* sube el texto 110px desde el centro */
- left: 5%;
- color: white;
- z-index: 10;
- padding: 1rem;
- max-width: 50%;
+/* Logo Central */
+.left-align {
+ align-items: flex-start;
+ padding-left: 40px;
 }
 
+.top-half {
+ top: 0;
+ height: 60vh;
+ padding-top: 215px;
+}
+
+.logo-container {
+ max-width: 350px;
+ width: 100%;
+ margin-bottom: 20px;
+}
+
+.logo-img {
+ width: 100%;
+ height: auto;
+ display: block;
+}
+
+/* Texto del hero */
 .hero-text h1 {
- font-size: 4.3rem;
- font-weight: 900;
- text-shadow: 2px 2px 4px #000;
- margin-bottom: 1rem;
+ font-size: 3.5rem;
+ color: white;
+ text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+ margin: 0;
+ padding-top: 50px;
 }
 
 /* Menú mobile */
-@media (max-width: 1800px) {
- .hero-text {
-  position: absolute;
-  top: 70%;
-  left: 0%;
-  color: white;
-  z-index: 10;
-  padding: 15px;
-  max-width: 50%;
- }
-
- .hero-text h1 {
-  font-size: 3rem;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px #000;
-  margin-bottom: 1rem;
- }
-}
-
-@media (max-width: 992px) {
- .hero-text {
-  position: absolute;
-  top: 70%;
-  left: 0%;
-  color: white;
-  z-index: 10;
-  padding: 15px;
-  max-width: 50%;
- }
-
- .hero-text h1 {
-  font-size: 2.4rem;
-  font-weight: 900;
-  text-shadow: 2px 2px 4px #000;
-  margin-bottom: 1rem;
- }
-}
-
 @media (max-width: 768px) {
- .hero-text {
- position: absolute;
- top: 46%;
- left: 0%;
- color: white;
- z-index: 10;
- padding: 15px;
- max-width: 50%;
-}
+ .hero-text h1 {
+  font-size: 2.5rem;
+  text-align: left;
+  padding-top: 10px;
+ }
 
-.hero-text h1 {
- font-size: 2.2rem;
- font-weight: 900;
- text-shadow: 2px 2px 4px #000;
- margin-bottom: 1rem;
-}
-}
+ .logo-container {
+  max-width: 200px;
+  margin-bottom: 15px;
+ }
 
+ .left-align {
+  padding-left: 20px;
+ }
+
+  .top-half {
+   height: 50vh;
+   padding-top: 185px;
+  }
+}
 
 /* Características */
 .stats-section {
